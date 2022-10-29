@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>homepage</title>
+    <style>
+
+      body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      background: url(./images/project\ bgfinal.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+     
+    
+      }
+        .align-center{
+            display: flex;
+          position: relative;
+          left: 950px;
+          top: 225px;
+          
+        }
+
+      .dropbtn {
+        padding: 15px 100px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color:rgb(142, 39, 173);
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 9px rgb(190, 71, 214);
+        display: flex;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
+     
+  }
+ 
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color:rgb(116, 13, 126);
+  }
+  .dropbtn:active {
+  background-color:5F399B;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+  display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position:absolute;
+
+    background-color: #f1f1f1;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+  .btn2{
+    color: plum;
+    float: none;
+    
+  }
+  .title{
+   text-align: center;
+    text-transform: uppercase;
+    text-overflow: inherit;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    float: right;
+    margin-top: 110px;
+    margin-right: 14px;
+
+  }
+    </style>
+</head>
+<body>
+    <h1 class="title">RESULT ANALYSIS AUTOMATION</h1>
+    <div class="align-center">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" >Choose Conversion</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="pdftoexcel.html">pdf to excel</a>
+              <a href="datasplit.html">excel data splitting/sorting</a> <br>
+              
+            </div>
+          </div>
+    </div>
+  
+      <script>
+          function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+      </script>
+</body>
+</html>
